@@ -1,0 +1,13 @@
+.stack-work
+orgToRem
+tex/*.aux
+tex/*.fdb_latexmk
+tex/*.log
+tex/*.fls
+tex/org.csv
+tex/entries.tex
+tex/agenda.pdf
+tex/suspended.png
+tex/suspended.pdf
+tex/org.txt
+agenda-uuid.txt

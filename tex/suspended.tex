@@ -1,0 +1,38 @@
+\documentclass[crop=true,varwidth=false,convert={size=1404x1872,outext=.png}]{standalone}
+
+\usepackage[a4paper,left=2.5cm,top=2.5cm,bottom=6cm,right=3cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} % better fonts
+
+\usepackage{color}
+\definecolor{gray}{gray}{0.50}
+\usepackage[svgnames]{xcolor}
+
+\usepackage{ucs}
+
+\usepackage{listings}
+\lstset{
+  backgroundcolor=\color{white},
+  fillcolor=\color{white},
+  extendedchars=\true,
+  inputencoding=utf8x,
+  basicstyle=\sffamily,
+  keywordstyle=\color{black}\bfseries\underbar,
+  showstringspaces=false,
+  columns=fullflexible,
+  breaklines=true,
+  emphstyle = [2]\color{gray}\sffamily,
+  emph = [2]{TODO,DONE,S},
+}
+
+\begin{document}
+\colorbox{white}
+{
+\begin{minipage}[c][0.99\textheight][t]{1\textwidth}
+  Agenda (generated \today)
+
+  \lstinputlisting{org.txt}
+\end{minipage}%
+}%
+\end{document}
