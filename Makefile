@@ -24,7 +24,7 @@ clean:
 
 copy-all: copy-agenda copy-suspended
 
-copy-agenda: tex/agenda.pdf
+copy-agenda: tex/agenda.pdf agenda-uuid.txt
 	scp tex/agenda.pdf remarkable:/home/root/.local/share/remarkable/xochitl/`cat agenda-uuid.txt`.pdf
 
 copy-suspended: tex/suspended.png
