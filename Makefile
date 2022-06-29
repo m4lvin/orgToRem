@@ -15,7 +15,7 @@ tex/entries.tex: tex/org.csv orgToRem
 	./orgToRem > $@
 
 tex/agenda.pdf: tex/entries.tex tex/agenda.tex
-	cd tex && latexmk -lualatex -shell-escape agenda
+	cd tex && latexmk -silent -lualatex -shell-escape agenda
 
 clean:
 	cd tex && latexmk -c
