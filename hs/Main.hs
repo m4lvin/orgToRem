@@ -82,6 +82,7 @@ printMonth entries year month = do
   putStr "\\phantom{Jyg} }\n\n"
   putStrLn "\n\\smallskip\n"
   putStrLn "\\begin{tabularx}{0.99\\linewidth}{Y@{\\hspace{1mm}}Y@{\\hspace{1mm}}Y@{\\hspace{1mm}}Y@{\\hspace{1mm}}Y@{\\hspace{1mm}}Y@{\\hspace{1mm}}Y}"
+  putStrLn "\\arrayrulecolor{gray}"
   putStrLn "\\toprule"
   let k = fromEnum $ dayOfWeek $ head (periodAllDays (YearMonth year month))
   mapM_ (\ _ -> putStrLn " & ") [1..(k-1)]
