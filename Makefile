@@ -5,7 +5,7 @@ tex/org.csv: ~/Org/*.org
 	emacs -batch -l ~/.emacs \
 		--eval="(add-to-list 'load-path \"./el\")" \
 		--eval="(require 'orgToRem)" \
-		--eval="(my-generate-year-csv)"> $@
+		--eval="(org-batch-agenda-csv \"y\")"> $@
 
 orgToRem: hs/Main.hs
 	stack build
@@ -38,4 +38,4 @@ tex/org.txt: ~/Org/*.org
 	emacs -batch -l ~/.emacs \
 		--eval="(add-to-list 'load-path \"./el\")" \
 		--eval="(require 'orgToRem)" \
-		--eval="(my-generate-day-txt)"> $@
+		--eval="(org-batch-agenda \"d\")"> $@

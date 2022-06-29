@@ -18,11 +18,5 @@
            '(:deadline :scheduled :timestamp :sexp))
           (org-agenda-span 'year)))))
 
-(defun my-generate-day-txt ()
-  (org-batch-agenda "d"))
-
-(defun my-generate-year-csv ()
-  (org-batch-agenda-csv "y"))
-
 (provide 'orgToRem)
 ;;; orgToRem.el ends here
