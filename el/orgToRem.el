@@ -10,7 +10,7 @@
           (org-agenda-remove-tags t)
           (org-agenda-overriding-header "")))
         ("y" "Year" agenda ""
-         ((org-agenda-start-day "2022-01-01")
+         ((org-agenda-start-day (concat (format-time-string "%Y-") "01-01"))
           (org-agenda-show-future-repeats 'next)
           (org-deadline-warning-days 0)
           (org-agenda-archives-mode t)
