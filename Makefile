@@ -19,6 +19,7 @@ tex/agenda.pdf: tex/entries.tex tex/agenda.tex
 
 clean:
 	cd tex && latexmk -c
+	rm -f tex/org.csv tex/entries.tex tex/agenda.pdf
 
 .PHONY: default clean copy-agenda copy-suspended copy-all
 
