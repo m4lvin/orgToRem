@@ -13,7 +13,7 @@ data OrgEntry = OE { oCategory :: String -- category of the item (usually the fi
                    , oType :: OrgType
                    , oTodo :: String -- TODO keyword, if any
                    , oTags :: [String] -- All tags including inherited ones, separated by colons
-                   , oDate :: String -- like ‘2007-2-14’ -- NOTE: no leading zeros!
+                   , oDate :: String -- like ‘2007-02-14’ -- NOTE: with leading zeros!
                    , oTime :: String -- time, like ‘15:00-16:50’
                    , oExtra :: String -- extra planning info
                    } deriving (Eq,Ord,Show)
@@ -50,7 +50,7 @@ readOrgType s = case s of
   _ -> error "unknown type"
 
 entriesFor :: Day -> [OrgEntry] -> [OrgEntry]
-entriesFor d = filter (\oe -> oDate oe == formatTime defaultTimeLocale "%Y-%-m-%-e" d)
+entriesFor d = filter (\oe -> oDate oe == formatTime defaultTimeLocale "%Y-%0m-%0e" d)
 
 entryTextLimit :: Int
 entryTextLimit = 25
